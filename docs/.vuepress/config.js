@@ -31,7 +31,12 @@ module.exports = {
       {
         title: 'RWD',
         // collapsable: true,
-        children: ['/rwd/setting', '/rwd/basic-template'],
+        children: [
+          '/rwd/setting',
+          '/rwd/basic-template',
+          '/rwd/break-point-element',
+          '/rwd/table',
+        ],
       },
     ],
   },
