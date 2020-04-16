@@ -29,6 +29,10 @@ module.exports = {
     // 側邊欄配置
     sidebar: [
       {
+        title: 'Form',
+        children: ['/form/placeholder'],
+      },
+      {
         title: 'RWD',
         // collapsable: true,
         children: [
@@ -36,6 +40,7 @@ module.exports = {
           '/rwd/basic-template',
           '/rwd/break-point-element',
           '/rwd/table',
+          '/rwd/graph-design',
         ],
       },
     ],
