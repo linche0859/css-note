@@ -43,6 +43,10 @@ module.exports = {
           '/rwd/graph-design',
         ],
       },
+      {
+        title: 'SASS',
+        children: ['/scss/mixin'],
+      },
     ],
   },
 };
