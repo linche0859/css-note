@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>mixin | CSS 筆記</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/css-note/favicon.ico">
+    <meta name="description" content="">
+    <link rel="preload" href="/css-note/assets/css/0.styles.258a93b1.css" as="style"><link rel="preload" href="/css-note/assets/js/app.fbeb9675.js" as="script"><link rel="preload" href="/css-note/assets/js/2.45f6c0c8.js" as="script"><link rel="preload" href="/css-note/assets/js/12.0259fd44.js" as="script"><link rel="prefetch" href="/css-note/assets/js/10.977737dc.js"><link rel="prefetch" href="/css-note/assets/js/11.78c70855.js"><link rel="prefetch" href="/css-note/assets/js/13.2bedf485.js"><link rel="prefetch" href="/css-note/assets/js/3.f2636e83.js"><link rel="prefetch" href="/css-note/assets/js/4.e0816293.js"><link rel="prefetch" href="/css-note/assets/js/5.6bd066e4.js"><link rel="prefetch" href="/css-note/assets/js/6.7683a990.js"><link rel="prefetch" href="/css-note/assets/js/7.f25762cb.js"><link rel="prefetch" href="/css-note/assets/js/8.7171cafd.js"><link rel="prefetch" href="/css-note/assets/js/9.e2a693c9.js">
+    <link rel="stylesheet" href="/css-note/assets/css/0.styles.258a93b1.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/css-note/" class="home-link router-link-active"><!----> <span class="site-name">CSS 筆記</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://github.com/linche0859/css-note" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://github.com/linche0859/css-note" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Form</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>RWD</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>SASS</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/css-note/scss/mixin.html" class="active sidebar-link">mixin</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/css-note/scss/mixin.html#基本用法" class="sidebar-link">基本用法</a></li><li class="sidebar-sub-header"><a href="/css-note/scss/mixin.html#加入變數" class="sidebar-link">加入變數</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="mixin"><a href="#mixin" class="header-anchor">#</a> mixin</h1> <ol><li>和繼承功能一樣，屬於被繼承的樣式</li> <li>被繼承幾次，就會產生幾份</li> <li>大部分都把變數和 function，在其中一起實作</li></ol> <h2 id="基本用法"><a href="#基本用法" class="header-anchor">#</a> 基本用法</h2> <div class="language-scss line-numbers-mode"><pre class="language-scss"><code><span class="token keyword">@mixin</span> <span class="token selector">clearfix </span><span class="token punctuation">{</span>
+  <span class="token selector"><span class="token parent important">&amp;</span>::before,
+  <span class="token parent important">&amp;</span>::after </span><span class="token punctuation">{</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> table<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token parent important">&amp;</span>::after </span><span class="token punctuation">{</span>
+    <span class="token property">clear</span><span class="token punctuation">:</span> both<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">@mixin</span> <span class="token selector">hide-text </span><span class="token punctuation">{</span>
+  <span class="token property">text-indent</span><span class="token punctuation">:</span> 110%<span class="token punctuation">;</span>
+  <span class="token property">white-space</span><span class="token punctuation">:</span> nowrap<span class="token punctuation">;</span>
+  <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">h1 </span><span class="token punctuation">{</span>
+  <span class="token keyword">@include</span> hide-text<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.box </span><span class="token punctuation">{</span>
+  <span class="token keyword">@include</span> clearfix<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><p>產生結果</p> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">h1</span> <span class="token punctuation">{</span>
+  <span class="token property">text-indent</span><span class="token punctuation">:</span> 110%<span class="token punctuation">;</span>
+  <span class="token property">white-space</span><span class="token punctuation">:</span> nowrap<span class="token punctuation">;</span>
+  <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.box::before,
+.box::after</span> <span class="token punctuation">{</span>
+  <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> table<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.box::after</span> <span class="token punctuation">{</span>
+  <span class="token property">clear</span><span class="token punctuation">:</span> both<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><h2 id="加入變數"><a href="#加入變數" class="header-anchor">#</a> 加入變數</h2> <div class="language-scss line-numbers-mode"><pre class="language-scss"><code><span class="token keyword">@mixin</span> <span class="token function">circle</span><span class="token punctuation">(</span><span class="token variable">$size</span><span class="token punctuation">,</span> <span class="token variable">$bgColor</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> <span class="token variable">$size</span><span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token variable">$size</span><span class="token punctuation">;</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token variable">$size</span> <span class="token operator">/</span> 3<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token variable">$bgColor</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.red-circle </span><span class="token punctuation">{</span>
+  <span class="token keyword">@include</span> <span class="token function">circle</span><span class="token punctuation">(</span>30px<span class="token punctuation">,</span> #f00<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>產生結果</p> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">.red-circle</span> <span class="token punctuation">{</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> #f00<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">5/3/2020, 7:57:48 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/css-note/rwd/graph-design.html" class="prev">
+        響應式圖形設計
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/css-note/assets/js/app.fbeb9675.js" defer></script><script src="/css-note/assets/js/2.45f6c0c8.js" defer></script><script src="/css-note/assets/js/12.0259fd44.js" defer></script>
+  </body>
+</html>
