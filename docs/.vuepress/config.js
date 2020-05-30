@@ -45,7 +45,7 @@ module.exports = {
       },
       {
         title: 'SASS',
-        children: ['/scss/mixin'],
+        children: ['/scss/mixin', '/scss/maps', '/scss/list'],
       },
     ],
   },

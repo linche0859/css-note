@@ -109,7 +109,7 @@ h1 {
 }
 ```
 
-### 選擇器的繼承與覆蓋
+## 選擇器的繼承與覆蓋
 
 常用於針對特定瀏覽器去做兼容性的語法
 
@@ -140,7 +140,7 @@ h1 {
 }
 ```
 
-### 狀態
+## 狀態管理
 
 可以針對如 `a` 標籤的狀態管理
 
@@ -189,7 +189,7 @@ h1 {
 }
 ```
 
-### @content 也可以寫二個以上
+## @content 也可以寫二個以上
 
 例如時常在寫的瀏覽器兼容前綴詞
 
@@ -230,7 +230,7 @@ div {
 }
 ```
 
-### RWD 斷點設計
+## RWD 斷點設計
 
 ```scss
 //透過斷點變數統一管理
@@ -264,6 +264,121 @@ $mobile: 767px;
     width: 100%;
   }
 }
+```
+
+### 使用 Map 方式
+
+```scss
+$breakpoints: (
+  desktop: 960px,
+  mobile: 568px,
+);
+​ @mixin for-mobile {
+  @media screen and (max-width: map-get($breakpoints, 'mobile')) {
+    @content;
+  }
+}
+​ @mixin for-desktop {
+  @media screen and (min-width: map-get($breakpoints, 'desktop')) {
+    @content;
+  }
+}
+```
+
+## BEM 設計模式
+
+在 `mixin` 當中使用了 `@at-root`，所以編譯的 CSS 會一律放到最頂層，這可以解決 BEM 層數太深的問題，也可以在開發時保持良好的模組性。也可以在 `mixin` 加上一些參數決定是否要套用 `@at-root` 來保持開發上的彈性。
+
+```scss
+@mixin block($block_name) {
+  .#{$block_name} {
+    @content;
+  }
+}
+​ @mixin element($element_name) {
+  @at-root &__#{$element_name} {
+    @content;
+  }
+}
+​ @mixin modifier($modifier_name) {
+  @at-root &--#{$modifier_name} {
+    @content;
+  }
+}
+​ @include block(article-entry) {
+  padding: 20px;
+  @include element(content) {
+    font-size: 20px;
+  }
+
+  @include element(footer) {
+    background-color: #fff;
+    @include modifier(larger) {
+      height: 500px;
+    }
+  }
+}
+​
+// compiled
+.article-entry {
+  padding: 20px;
+}
+.article-entry__content {
+  font-size: 20px;
+}
+.article-entry__footer {
+  background-size: #fff;
+}
+.article-entry__footer--larger {
+  height: 500px;
+}
+```
+
+## 引入 css variable
+
+目前比較新的瀏覽器都已經支援 css variable 了。我們可以將顏色等變數使用 css variable 重新撰寫，並且使用優雅降級來確保在其他瀏覽器也能正常工作。
+
+```scss
+$colors: (
+  main: #aaa,
+  font: #333,
+  danger: red
+);
+​
+:root {
+  @each $key, $color in $colors {
+    --#{key}: $color;
+  }
+}
+​
+@mixin css($prop, $key) {
+  #{$prop}: map-get($colors, $key);
+  @if (map-has-key($colors, $key) == false) {
+    @error "Unknown key `#{$key}`. checkout your `$colors` variable";
+  }
+
+  @supports (--foo: "bar") {
+    #{$prop}: var(--#{$key});
+  }
+}
+.container {
+  @include css('background-color', "main");
+}
+​
+// compiled
+:root {
+  --main: #aaa;
+  --font: #333;
+  --danger: red;
+}
+​
+.container {
+  background-color: #aaa;
+  @supports (--foo: "bar") {
+    background-color: var(--main);
+  }
+}
+​
 ```
 
 ## 參考
