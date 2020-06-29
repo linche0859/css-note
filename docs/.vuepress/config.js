@@ -47,6 +47,14 @@ module.exports = {
         title: 'SASS',
         children: ['/scss/mixin', '/scss/maps', '/scss/list'],
       },
+      {
+        title: '切版直播班',
+        children: ['layout/week3'],
+      },
+      {
+        title: '二三兩事',
+        children: ['other/reflow'],
+      },
     ],
   },
 };
