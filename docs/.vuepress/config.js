@@ -53,7 +53,7 @@ module.exports = {
       },
       {
         title: '二三兩事',
-        children: ['other/reflow'],
+        children: ['other/reflow', 'other/variable'],
       },
     ],
   },

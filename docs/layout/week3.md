@@ -49,6 +49,47 @@ body {
 
 ## Dark mode
 
+語法上使用 `prefers-color-scheme` 來監測是亮色或暗色的主題，相對應的值也就是 `dark` 或 `light`
+
+### 使用變數快速切換網頁的主題色
+
+如果透過一個個的 `@media` 設定將會增加開發及管理的困難度，在開發時可以將暗色、亮色的佈景主題色彩以 **CSS 變數** 的方式作定義，避免直接將色彩寫入 CSS 元素上，接下來在 `@media` 中僅需要改變 CSS 的變數就能夠完整切換所有元件的主題色彩。
+
+```html
+<div class="demo mode">
+  <p>本區塊會隨著暗色與亮色主題切換</p>
+  <p>您目前的是 <span class="text-mode"></span> 主題</p>
+</div>
+```
+
+```css
+.mode {
+  /* 紫色 */
+  --theme-primary: #6222ee;
+  --theme-background: #eee;
+}
+.mode {
+  background-color: var(--theme-background);
+  color: var(--theme-primary);
+}
+.text-mode:after {
+  content: 'light';
+}
+
+/* 當主題色為深色時觸發 */
+@media (prefers-color-scheme: dark) {
+  .mode {
+    --theme-primary: #bb85fc;
+    --theme-background: #111;
+  }
+  .text-mode:after {
+    content: 'dark';
+  }
+}
+```
+
+![dark mode](./dark-mode.png)
+
 ## 參考
 
 [font-family 要怎麼玩](https://wcc723.github.io/css/2014/01/01/font-family/)
