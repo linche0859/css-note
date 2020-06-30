@@ -12,3 +12,6 @@
   - [mixin](/scss/mixin.md)
   - [map](/scss/maps.md)
   - [list](/scss/list.md)
+- 二三兩事
+  - [Reflow and Repaint](/other/reflow.md)
+  - [變數運用技巧](/other/variable.md)
