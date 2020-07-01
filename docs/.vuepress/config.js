@@ -45,6 +45,7 @@ module.exports = {
       },
       {
         title: 'SASS',
+        path: '/scss/',
         children: ['/scss/mixin', '/scss/maps', '/scss/list'],
       },
       {
