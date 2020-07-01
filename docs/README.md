@@ -15,3 +15,5 @@
 - 二三兩事
   - [Reflow and Repaint](/other/reflow.md)
   - [變數運用技巧](/other/variable.md)
+  - [CSS 權重](/other/specificity.md)
+  - [Flex 空間計算規則](/other/flex.md)
