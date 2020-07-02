@@ -90,6 +90,41 @@ body {
 
 ![dark mode](./dark-mode.png)
 
+## 行高計算概念
+
+### 實戰中常見的解決方法
+
+- body 中統一設定行高 1.5
+- h1 ~ h6 標籤設定行高 1.2，視覺上可以較舒適
+
+### 不好的做法
+
+- 寫死高度，如 `line-height: 54px`
+- 過多的行高定義
+
+## 主要內容與背景圖的差異
+
+需分辨圖片為主要內容還是背景圖，如為背景圖，可將 `background-image` 寫於外層，如：
+
+```html
+<header class="header">
+  ...
+</header>
+```
+
+```css
+.header {
+  background-image: url(./images/xxx.png);
+}
+```
+
+## 圖片判斷
+
+當圖片有下方條件時，應使用 `background`。
+
+- 長寬比的切換，如：pc 版的長寬比為 2 : 1，mobile 版的長寬比為 1 : 2
+- 圖片是否需要裁切，如：pc 版為圖片滿版，mobile 版只剩下中間部分
+
 ## 參考
 
 [font-family 要怎麼玩](https://wcc723.github.io/css/2014/01/01/font-family/)
