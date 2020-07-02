@@ -46,7 +46,7 @@ module.exports = {
       {
         title: 'SASS',
         path: '/scss/',
-        children: ['/scss/mixin', '/scss/maps', '/scss/list'],
+        children: ['/scss/mixin', '/scss/extend', '/scss/maps', '/scss/list'],
       },
       {
         title: '切版直播班',

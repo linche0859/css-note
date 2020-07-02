@@ -53,3 +53,32 @@ li {
   font-size: $bigFontSize;
 }
 ```
+
+## VS Code 設定
+
+VS Code 安裝 live sass compile 後，可於 `setting.json` 中加入下方設定：
+
+```json
+{
+  "liveSassCompile.settings.formats": [
+    // 用於 development
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/style"
+    },
+    // 用於 production
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": "/dist/css"
+    }
+  ],
+  // compile時，產生map檔案
+  "liveSassCompile.settings.generateMap": false,
+  // 排除被Compile的檔案
+  "liveSassCompile.settings.excludeList": ["**/node_modules/**", ".vscode/**"],
+  // 自動轉換瀏覽器版本，post css
+  "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"]
+}
+```

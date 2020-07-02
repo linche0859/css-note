@@ -55,8 +55,10 @@ h1 {
 
 ## 加入變數
 
+變數可以加入預設值。
+
 ```scss
-@mixin circle($size, $bgColor) {
+@mixin circle($size: 16px, $bgColor: #000) {
   border-radius: 50%;
   width: $size;
   height: $size;
