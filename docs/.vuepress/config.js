@@ -50,7 +50,7 @@ module.exports = {
       },
       {
         title: '切版直播班',
-        children: ['layout/week3'],
+        children: ['layout/week3', 'layout/week4'],
       },
       {
         title: '二三兩事',

@@ -13,6 +13,9 @@
   - [extend](/scss/extend.md)
   - [map](/scss/maps.md)
   - [list](/scss/list.md)
+- 切版直播班
+  - [第三週補充教材](/layout/week3.md)
+  - [第四週補充教材](/layout/week4.md)
 - 二三兩事
   - [Reflow and Repaint](/other/reflow.md)
   - [變數運用技巧](/other/variable.md)
