@@ -82,3 +82,15 @@
 當設計出的 SVG 檔中，有包含 **亂碼** 或 `images` 標籤 (其中引入的檔案類型為 **點陣圖**)，都是屬於不好的 SVG 圖示。
 
 因為在放大圖示時，會有模糊效果，就會失去原有 SVG 的特性。
+
+### 自定義 SVG 樣式
+
+- 將 SVG 結構放置於 html 中，再修改其樣式
+- SVG 設定檔中更改樣式
+
+```svg
+<svg width="100%" height="105">
+	<rect x="2" y="2" width="100" height="100" style="stroke: #333; stroke-width: 3; fill: FireBrick;"/>
+	<rect x="120" y="2" width="200" height="100" style="stroke: #333; stroke-width: 3; fill: LightSkyBlue;"/>
+</svg>
+```
