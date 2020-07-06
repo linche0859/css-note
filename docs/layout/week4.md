@@ -94,3 +94,35 @@
 	<rect x="120" y="2" width="200" height="100" style="stroke: #333; stroke-width: 3; fill: LightSkyBlue;"/>
 </svg>
 ```
+
+## 顏色的變數定義
+
+可以參考 Bootstrap 定義。一般可以分為：
+
+- 情境色
+  - \$primary
+  - \$secondary
+  - \$success
+  - ...
+- 功能色
+  - background
+
+盡可能的使用 **情境色**，如當情境色皆使用完，才會運用功能色。
+
+:::warning 提醒
+
+1. 避免使用色名，如：
+   ```scss
+   $green: green;
+   ```
+   因如果有一天要改為紅色時，就會變為 `$green: red;`，增加維護上的不易性。
+1. 尺寸 - 盡可能語意化，如：
+
+   ```scss
+   // good
+   $large-size: 50px;
+   // bad
+   $h-50: 50px;
+   ```
+
+:::
