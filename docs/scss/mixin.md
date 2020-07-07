@@ -383,6 +383,47 @@ $colors: (
 ​
 ```
 
+## 網格系統
+
+仿效 Bootstrap 的設計模式，結合自訂的 mixin，達成簡易的網格系統規劃：
+
+```scss
+$width: 960px;
+$gutter: 15px;
+
+@mixin marginX($margin) {
+  margin-left: $margin;
+  margin-right: $margin;
+}
+
+@mixin paddingX($padding) {
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
+// columnNumber: 欄位數量，columnGutter: 欄位間距
+@mixin grid($columnNumber, $columnGutter: $gutter) {
+  flex-basis: ($width - $columnGutter * ($columnNumber - 1)) / $columnNumber;
+  @include paddingX($columnGutter);
+  box-sizing: border-box;
+}
+
+.container {
+  width: $width;
+  margin: 0 auto;
+  @include paddingX($gutter);
+}
+
+.row {
+  display: flex;
+  @include marginX($gutter * -1);
+}
+
+.productItem {
+  @include grid(4);
+}
+```
+
 ## 參考
 
 [Sass 教學 (11) - @content](https://ithelp.ithome.com.tw/articles/10156850)
