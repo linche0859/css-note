@@ -11,6 +11,7 @@
 - SASS
   - [mixin](/scss/mixin.md)
   - [extend](/scss/extend.md)
+  - [nth() 和 index()](/scss/nth-index.md)
   - [map](/scss/maps.md)
   - [list](/scss/list.md)
 - 切版直播班
