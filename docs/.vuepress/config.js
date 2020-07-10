@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   title: 'CSS 筆記',
   base: '/css-note/',
@@ -6,7 +8,8 @@ module.exports = {
   configureWebpack: {
     resolve: {
       alias: {
-        '@image': '/images',
+        '@image': path.resolve(__dirname, './images'),
+        '@styles': path.resolve(__dirname, './styles'),
       },
     },
   },
@@ -49,7 +52,8 @@ module.exports = {
         children: [
           '/scss/mixin',
           '/scss/extend',
-          'scss/nth-index',
+          '/scss/nth-index',
+          '/scss/if',
           '/scss/maps',
           '/scss/list',
         ],
@@ -65,6 +69,7 @@ module.exports = {
           'other/variable',
           'other/specificity',
           'other/flex',
+          'other/transition',
         ],
       },
     ],

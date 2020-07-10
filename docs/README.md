@@ -12,6 +12,7 @@
   - [mixin](/scss/mixin.md)
   - [extend](/scss/extend.md)
   - [nth() 和 index()](/scss/nth-index.md)
+  - [if](/scss/if.md)
   - [map](/scss/maps.md)
   - [list](/scss/list.md)
 - 切版直播班
@@ -22,3 +23,4 @@
   - [變數運用技巧](/other/variable.md)
   - [CSS 權重](/other/specificity.md)
   - [Flex 空間計算規則](/other/flex.md)
+  - [Transition](/other/transition.md)
