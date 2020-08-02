@@ -17,7 +17,7 @@ export default {
   watch: {},
   created() {},
   mounted() {},
-  methods: {}
+  methods: {},
 };
 </script>
 
@@ -28,6 +28,7 @@ export default {
   padding: 3rem 2rem 2rem;
   background: #fff;
   border: 2px solid #c4ead9;
+  overflow: hidden;
   &__title {
     position: absolute;
     top: -2px;

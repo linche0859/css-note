@@ -1,4 +1,6 @@
-# for
+# for 和 random()
+
+## @for
 
 ```scss
 @for $i from 0 through 3 {
@@ -48,3 +50,60 @@ $boxLength: length($boxBackground);
 }
 // ...
 ```
+
+## random()
+
+預設會返回 1 ~ 100 中的值，而 random() 中只能放入 **單一整數** 去定義上限。如果設定 `random(500)` 則會返回 1 ~ 500 中的數值。
+
+---
+
+假設一個背景要做很多圓形圖案飛過的特效。條件：
+
+1. 每個圓形的 **背景顏色** 都需要不一樣
+1. 每個圓形的 **移動速度** 都要不一樣
+
+```scss
+$boxes: 100;
+
+// animation mixin
+@mixin move($name, $duration: 3s) {
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(
+    #{random(1000) / 1000},
+    #{random(1000) / 1000},
+    #{random(1000) / 1000},
+    #{random(1000) / 1000}
+  );
+}
+
+@for $i from 1 through $boxes {
+  $name: move#{$i};
+  @keyframes move#{$i} {
+    from {
+      left: percentage(random(100) / 100);
+      top: percentage(random(100) / 100);
+    }
+    to {
+      left: percentage(random(100) / 100);
+      top: percentage(random(100) / 100);
+    }
+  }
+  .box-#{$i} {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgb(random(255), random(255), random(255));
+    color: #000;
+    box-shadow: 5px 5px #000;
+    @include move($name);
+  }
+}
+```
+
+<TryBox>
+  <scss-for-Random />
+</TryBox>
