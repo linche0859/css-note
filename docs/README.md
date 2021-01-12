@@ -1,7 +1,5 @@
 # 目錄
 
-- Form
-  - [placeholder](/form/placeholder.md)
 - RWD
   - [基本環境介紹](/rwd/setting.md)
   - [網站版型框架設定](/rwd/basic-template.md)
@@ -19,9 +17,11 @@
 - 切版直播班
   - [第三週補充教材](/layout/week3.md)
   - [第四週補充教材](/layout/week4.md)
-- 二三兩事
+- 屬性介紹
+  - [placeholder](/other/placeholder.md)
   - [Reflow and Repaint](/other/reflow.md)
   - [變數運用技巧](/other/variable.md)
   - [CSS 權重](/other/specificity.md)
   - [Flex 空間計算規則](/other/flex.md)
+  - [Grid](/other/grid.md)
   - [Transition](/other/transition.md)

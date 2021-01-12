@@ -9,13 +9,13 @@ module.exports = {
     resolve: {
       alias: {
         '@image': path.resolve(__dirname, './images'),
-        '@styles': path.resolve(__dirname, './styles')
-      }
-    }
+        '@styles': path.resolve(__dirname, './styles'),
+      },
+    },
   },
   markdown: {
     // 代碼塊顯示行號
-    lineNumbers: true
+    lineNumbers: true,
   },
   themeConfig: {
     // 將同時提取 markdown 中 h2 和 h3 標題，顯示在側邊欄上
@@ -27,14 +27,10 @@ module.exports = {
     // 導航欄配置
     nav: [
       // 內部鏈接 以 docs 為根目錄
-      { text: 'GitHub', link: 'https://github.com/linche0859/css-note' } // 外部鏈接
+      { text: 'GitHub', link: 'https://github.com/linche0859/css-note' }, // 外部鏈接
     ],
     // 側邊欄配置
     sidebar: [
-      {
-        title: 'Form',
-        children: ['/form/placeholder']
-      },
       {
         title: 'RWD',
         // collapsable: true,
@@ -43,8 +39,8 @@ module.exports = {
           '/rwd/basic-template',
           '/rwd/break-point-element',
           '/rwd/table',
-          '/rwd/graph-design'
-        ]
+          '/rwd/graph-design',
+        ],
       },
       {
         title: 'SASS',
@@ -56,23 +52,25 @@ module.exports = {
           '/scss/if',
           '/scss/for',
           '/scss/maps',
-          '/scss/list'
-        ]
+          '/scss/list',
+        ],
       },
       {
         title: '切版直播班',
-        children: ['layout/week3', 'layout/week4']
+        children: ['layout/week3', 'layout/week4'],
       },
       {
-        title: '二三兩事',
+        title: '屬性介紹',
         children: [
+          'other/placeholder',
           'other/reflow',
           'other/variable',
           'other/specificity',
           'other/flex',
-          'other/transition'
-        ]
-      }
-    ]
-  }
+          'other/grid',
+          'other/transition',
+        ],
+      },
+    ],
+  },
 };

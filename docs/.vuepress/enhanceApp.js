@@ -1,4 +1,5 @@
-import './styles/all.scss';
+const style = require('./styles/all.css');
+console.log(style);
 
 export default ({
   Vue, // the version of Vue being used in the VuePress app
