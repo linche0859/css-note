@@ -29,7 +29,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scope>
+<style lang="scss" scoped>
 $function: ease, ease-in, ease-out, ease-in-out, linear,
   cubic-bezier(0.1, 0.7, 1, 0.1), step-start, step-end, steps(4, end);
 

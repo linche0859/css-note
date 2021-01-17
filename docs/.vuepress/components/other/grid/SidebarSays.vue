@@ -31,7 +31,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scope>
+<style lang="scss" scoped>
 .sidebarSays{
   &__resize {
     height: 240px;

@@ -28,7 +28,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scope>
+<style lang="scss" scoped>
 .repeatAutoFill{
   &__resize {
     height: 240px;

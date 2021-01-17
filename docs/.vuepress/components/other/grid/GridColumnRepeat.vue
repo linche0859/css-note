@@ -24,7 +24,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scope>
+<style lang="scss" scoped>
 .gridColumnRepeat{
   display: grid;
   grid-template-columns: repeat(2, 1fr 2fr) 100px;

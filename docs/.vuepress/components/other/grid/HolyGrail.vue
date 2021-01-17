@@ -29,7 +29,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scope>
+<style lang="scss" scoped>
 .holyGrail{
   &__resize {
     height: 240px;

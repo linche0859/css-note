@@ -19,7 +19,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scope>
+<style lang="scss" scoped>
 .wavePunch {
   margin: 0 auto;
   width: 130px;

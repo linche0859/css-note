@@ -23,7 +23,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scope>
+<style lang="scss" scoped>
 .gridTemplate{
   display: grid;
   grid-template-columns: 40% 5% auto 5% 40%;

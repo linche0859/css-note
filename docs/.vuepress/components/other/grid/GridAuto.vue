@@ -43,7 +43,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scope>
+<style lang="scss" scoped>
 .gridAuto{
   .grid {
     height: 240px;

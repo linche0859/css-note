@@ -30,7 +30,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scope>
+<style lang="scss" scoped>
 .triangle {
   @mixin triangle($size, $color, $align: top, $type: 0.86666) {
     height: 0;
