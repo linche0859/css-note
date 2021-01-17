@@ -12,6 +12,8 @@
   border-radius: 0.25rem;
   border-width: 0px;
   cursor: pointer;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .btn-success:focus {
