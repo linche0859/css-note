@@ -10,7 +10,7 @@
 
 2.  前往 font-awesome 複製 icon 的 Unicode 碼
 
-![font-awesome](./font-awesome.png)
+![font-awesome](./images/font-awesome.png)
 
 此碼前方加上 `&#x` 後，成為 `&#xf0e0`，填入 `input` 的 `placeholder`，命名一新的 class，此為 `useFontAwesomeFamily`
 

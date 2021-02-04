@@ -64,6 +64,7 @@ module.exports = {
         children: [
           'other/placeholder',
           'other/reflow',
+          'other/rendering',
           'other/variable',
           'other/specificity',
           'other/flex',
