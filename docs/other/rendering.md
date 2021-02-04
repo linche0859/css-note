@@ -1,4 +1,4 @@
-# 網頁的渲染過程
+# 網頁的解析過程
 
 有關「關鍵渲染路徑」(Critical Rendering Path, CRP)，可以參考 [這裡](https://ithelp.ithome.com.tw/articles/10248286)。
 

@@ -20,7 +20,8 @@
 - 屬性介紹
   - [placeholder](/other/placeholder.md)
   - [Reflow and Repaint](/other/reflow.md)
-  - [網頁的渲染過程](/other/rendering.md)
+  - [網頁的解析過程](/other/rendering.md)
+  - [優化網頁的渲染](/other/rendering-optimization.md)
   - [變數運用技巧](/other/variable.md)
   - [CSS 權重](/other/specificity.md)
   - [Flex 空間計算規則](/other/flex.md)

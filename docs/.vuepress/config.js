@@ -65,6 +65,7 @@ module.exports = {
           'other/placeholder',
           'other/reflow',
           'other/rendering',
+          'other/rendering-optimization',
           'other/variable',
           'other/specificity',
           'other/flex',

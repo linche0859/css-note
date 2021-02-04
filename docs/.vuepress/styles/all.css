@@ -127,6 +127,10 @@
   --tw-ring-shadow: 0 0 #0000;
 }
 
+.w-full {
+  width: 100%;
+}
+
 .gap-2 {
   gap: 0.5rem;
 }
