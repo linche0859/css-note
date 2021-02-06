@@ -44,6 +44,26 @@
 
 因為瀏覽器在解析 HTML 的時候，如果遇到 JavaScript 時，會將主線程的控制權從解析 HTML 交給 JavaScript 引擎（**阻止解析**），執行完畢後再繼續解析 HTML。
 
+## Unblocking
+
+- 降低檔案大小
+
+  用壓縮、Tree shaking、Code spliting 等方式降低關鍵資源的大小，加快下載和解析速度
+
+- Inline
+
+  把轉譯頁面所需的 CSS、JavaScript 直接寫入 HTML，降低 Round-trip
+
+- 加入屬性
+
+  - CSS - 把手機板的 CSS `<link>` 加上 `media` 屬性，避免使用電腦時被不必要的 CSS 阻止轉譯
+
+  - JavaScript - 執行和 HTML、CSS 無直接關係，在 `<script>` 加上 `async`、`defer` 屬性後就不會阻止解析
+
+- 提早、並行下載
+
+  盡可能的讓關鍵資源越早開始下載越好，因為下載通常是花費最長時間的部分
+
 ## 實際渲染狀況
 
 ### 沒有 CSS 和 JavaScript
