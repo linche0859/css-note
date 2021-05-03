@@ -6,6 +6,7 @@
   - [斷點規劃](/rwd/break-point-element.md)
   - [響應式表格設計](/rwd/table.md)
   - [響應式圖片設計](/rwd/graph-design.md)
+  - [讓圖片也能 RWD](/rwd/responsive-image.md)
 - SASS
   - [mixin](/scss/mixin.md)
   - [extend](/scss/extend.md)

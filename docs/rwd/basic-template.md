@@ -1,6 +1,6 @@
 # 網站版型框架設定
 
-![完成結果](./basic-template.gif)
+![完成結果](./images/basic-template.gif)
 
 ```css
 *,

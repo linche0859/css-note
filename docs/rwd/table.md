@@ -1,6 +1,6 @@
 # 響應式表格設計
 
-![table](./table.gif)
+![table](./images/table.gif)
 
 :::tip 說明
 
@@ -177,9 +177,7 @@ td {
       <td data-th="成本">331</td>
       <td data-th="售價">421</td>
       <td data-th="存貨">3</td>
-      <td data-th="備註">
-        已有走到怎麼樣無數把握維護實在管理系統。
-      </td>
+      <td data-th="備註">已有走到怎麼樣無數把握維護實在管理系統。</td>
     </tr>
   </table>
 </div>

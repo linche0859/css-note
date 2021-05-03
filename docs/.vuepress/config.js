@@ -40,6 +40,7 @@ module.exports = {
           '/rwd/break-point-element',
           '/rwd/table',
           '/rwd/graph-design',
+          '/rwd/responsive-image',
         ],
       },
       {
